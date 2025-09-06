@@ -9,16 +9,16 @@ struct ObservableViewA: View {
             Text("@Observable View A")
                 .font(.headline)
                 .foregroundColor(.purple)
-                // .debugRender()
-                .debugCompute()
+                 .debugRender()
+                // .debugCompute()
             
             HStack {
                 Text("Property A: \(model.propertyA)")
                     .padding(8)
                     .background(Color.purple.opacity(0.1))
                     .cornerRadius(4)
-                    // .debugRender()
-                    .debugCompute()
+                     .debugRender()
+                    // .debugCompute()
                 
                 Spacer()
                 
@@ -27,15 +27,15 @@ struct ObservableViewA: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .controlSize(.small)
-                // .debugRender()
-                .debugCompute()
+                 .debugRender()
+                // .debugCompute()
             }
             
             HStack {
                 Text("Counter: \(model.counter)")
                     .padding(8)
-                    // .debugRender()
-                    .debugCompute()
+                     .debugRender()
+                    // .debugCompute()
                 
                 Spacer()
                 
@@ -44,13 +44,13 @@ struct ObservableViewA: View {
                 }
                 .buttonStyle(.bordered)
                 .controlSize(.small)
-                // .debugRender()
-                .debugCompute()
+                 .debugRender()
+                // .debugCompute()
             }
         }
         .padding()
-        // .debugRender()
-        .debugCompute()
+         .debugRender()
+        // .debugCompute()
     }
 }
 
@@ -62,14 +62,14 @@ struct ObservableViewB: View {
             Text("@Observable View B")
                 .font(.headline)
                 .foregroundColor(.orange)
-                // .debugRender()
-                .debugCompute()
+                .debugRender()
+                // .debugCompute()
             
             HStack {
                 Text("Property B: \(model.propertyB)")
                     .padding(8)
-                    // .debugRender()
-                    .debugCompute()
+                    .debugRender()
+                    // .debugCompute()
                 
                 Spacer()
                 
@@ -78,15 +78,15 @@ struct ObservableViewB: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .controlSize(.small)
-                // .debugRender()
-                .debugCompute()
+                .debugRender()
+                // .debugCompute()
             }
             
             HStack {
                 Text("Counter: \(model.counter)")
                     .padding(8)
-                    // .debugRender()
-                    .debugCompute()
+                    .debugRender()
+                    // .debugCompute()
                 
                 Spacer()
                 
@@ -95,13 +95,13 @@ struct ObservableViewB: View {
                 }
                 .buttonStyle(.bordered)
                 .controlSize(.small)
-                // .debugRender()
-                .debugCompute()
+                .debugRender()
+                // .debugCompute()
             }
         }
         .padding()
-        // .debugRender()
-        .debugCompute()
+        .debugRender()
+        // .debugCompute()
     }
 }
 
