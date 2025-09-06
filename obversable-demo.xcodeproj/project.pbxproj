@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5680C4DA2E6C1614002D71C1 /* RenderMeThis in Frameworks */ = {isa = PBXBuildFile; productRef = 5680C4D92E6C1614002D71C1 /* RenderMeThis */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		5651DD182E6C151B009CDADF /* obversable-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "obversable-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5680C4DA2E6C1614002D71C1 /* RenderMeThis in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = "obversable-demo";
 			packageProductDependencies = (
+				5680C4D92E6C1614002D71C1 /* RenderMeThis */,
 			);
 			productName = "obversable-demo";
 			productReference = 5651DD182E6C151B009CDADF /* obversable-demo.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = 5651DD0F2E6C151B009CDADF;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				5680C4D82E6C1614002D71C1 /* XCRemoteSwiftPackageReference "RenderMeThis" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5651DD192E6C151B009CDADF /* Products */;
 			projectDirPath = "";
@@ -351,6 +360,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5680C4D82E6C1614002D71C1 /* XCRemoteSwiftPackageReference "RenderMeThis" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Aeastr/RenderMeThis";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5680C4D92E6C1614002D71C1 /* RenderMeThis */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5680C4D82E6C1614002D71C1 /* XCRemoteSwiftPackageReference "RenderMeThis" */;
+			productName = RenderMeThis;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5651DD102E6C151B009CDADF /* Project object */;
 }

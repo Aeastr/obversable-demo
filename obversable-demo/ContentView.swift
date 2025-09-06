@@ -6,16 +6,23 @@
 //
 
 import SwiftUI
+import RenderMeThis
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            ObservableObjectDemoView()
+                .tabItem {
+                    Image(systemName: "square.stack.3d.up")
+                    Text("ObservableObject")
+                }
+            
+            ObservableDemoView()
+                .tabItem {
+                    Image(systemName: "bolt.circle")
+                    Text("@Observable")
+                }
         }
-        .padding()
     }
 }
 

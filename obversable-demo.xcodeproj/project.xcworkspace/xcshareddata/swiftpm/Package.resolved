@@ -1,0 +1,15 @@
+{
+  "originHash" : "ee16f353c0a943502be36044521fb44fb8e5cce3417c3413a9e7cc2b903f7a63",
+  "pins" : [
+    {
+      "identity" : "rendermethis",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Aeastr/RenderMeThis",
+      "state" : {
+        "revision" : "30b5a9a28bb3bffe20a9265296e32138548d0c9a",
+        "version" : "2.0.1"
+      }
+    }
+  ],
+  "version" : 3
+}
