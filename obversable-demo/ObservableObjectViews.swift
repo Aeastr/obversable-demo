@@ -10,12 +10,14 @@ struct ObservableObjectViewA: View {
             Text("ObservableObject View A")
                 .font(.headline)
                 .foregroundColor(.blue)
+                .debugRender(enabled: debugSettings.renderDebugEnabled)
+                .debugCompute(enabled: debugSettings.computeDebugEnabled)
             
             HStack {
                 Text("Property A: \(model.propertyA)")
                     .padding(8)
-                    .background(Color.blue.opacity(0.1))
-                    .cornerRadius(4)
+                    .debugRender(enabled: debugSettings.renderDebugEnabled)
+                    .debugCompute(enabled: debugSettings.computeDebugEnabled)
                 
                 Spacer()
                 
@@ -24,13 +26,15 @@ struct ObservableObjectViewA: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .controlSize(.small)
+                .debugRender(enabled: debugSettings.renderDebugEnabled)
+                .debugCompute(enabled: debugSettings.computeDebugEnabled)
             }
             
             HStack {
                 Text("Counter: \(model.counter)")
                     .padding(8)
-                    .background(Color.gray.opacity(0.1))
-                    .cornerRadius(4)
+                    .debugRender(enabled: debugSettings.renderDebugEnabled)
+                    .debugCompute(enabled: debugSettings.computeDebugEnabled)
                 
                 Spacer()
                 
@@ -39,11 +43,11 @@ struct ObservableObjectViewA: View {
                 }
                 .buttonStyle(.bordered)
                 .controlSize(.small)
+                .debugRender(enabled: debugSettings.renderDebugEnabled)
+                .debugCompute(enabled: debugSettings.computeDebugEnabled)
             }
         }
         .padding()
-        .background(Color.blue.opacity(0.05))
-        .cornerRadius(8)
         .debugRender(enabled: debugSettings.renderDebugEnabled)
         .debugCompute(enabled: debugSettings.computeDebugEnabled)
     }
@@ -58,14 +62,14 @@ struct ObservableObjectViewB: View {
             Text("ObservableObject View B")
                 .font(.headline)
                 .foregroundColor(.green)
-                .debugRender()
-                // .debugCompute()
+                .debugRender(enabled: debugSettings.renderDebugEnabled)
+                .debugCompute(enabled: debugSettings.computeDebugEnabled)
             
             HStack {
                 Text("Property B: \(model.propertyB)")
                     .padding(8)
-                    .debugRender()
-                    // .debugCompute()
+                    .debugRender(enabled: debugSettings.renderDebugEnabled)
+                    .debugCompute(enabled: debugSettings.computeDebugEnabled)
                 
                 Spacer()
                 
@@ -74,15 +78,15 @@ struct ObservableObjectViewB: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .controlSize(.small)
-                .debugRender()
-                // .debugCompute()
+                .debugRender(enabled: debugSettings.renderDebugEnabled)
+                .debugCompute(enabled: debugSettings.computeDebugEnabled)
             }
             
             HStack {
                 Text("Counter: \(model.counter)")
                     .padding(8)
-                    .debugRender()
-                    // .debugCompute()
+                    .debugRender(enabled: debugSettings.renderDebugEnabled)
+                    .debugCompute(enabled: debugSettings.computeDebugEnabled)
                 
                 Spacer()
                 
@@ -91,8 +95,8 @@ struct ObservableObjectViewB: View {
                 }
                 .buttonStyle(.bordered)
                 .controlSize(.small)
-                .debugRender()
-                // .debugCompute()
+                .debugRender(enabled: debugSettings.renderDebugEnabled)
+                .debugCompute(enabled: debugSettings.computeDebugEnabled)
             }
         }
         .padding()
