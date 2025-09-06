@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Aeastr/RenderMeThis",
       "state" : {
-        "revision" : "30b5a9a28bb3bffe20a9265296e32138548d0c9a",
-        "version" : "2.0.1"
+        "revision" : "0f9eb374addfd685154a3583a5d82bd5e2ac6005",
+        "version" : "2.1.0"
       }
     }
   ],

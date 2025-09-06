@@ -10,8 +10,8 @@ struct ObservableViewA: View {
             Text("@Observable View A")
                 .font(.headline)
                 .foregroundColor(.purple)
-                .debugRender()
-                // .debugCompute()
+                .debugRender(enabled: debugSettings.renderDebugEnabled)
+                .debugCompute(enabled: debugSettings.computeDebugEnabled)
             
             let _ = Self._printChanges()
         
@@ -22,8 +22,8 @@ struct ObservableViewA: View {
             HStack {
                 Text("Property A: \(model.propertyA)")
                     .padding(8)
-                    .debugRender()
-                    // .debugCompute()
+                    .debugRender(enabled: debugSettings.renderDebugEnabled)
+                    .debugCompute(enabled: debugSettings.computeDebugEnabled)
                 
                 Spacer()
                 
@@ -32,15 +32,15 @@ struct ObservableViewA: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .controlSize(.small)
-                .debugRender()
-                // .debugCompute()
+                .debugRender(enabled: debugSettings.renderDebugEnabled)
+                .debugCompute(enabled: debugSettings.computeDebugEnabled)
             }
             
             HStack {
                 Text("Counter: \(model.counter)")
                     .padding(8)
-                    .debugRender()
-                    // .debugCompute()
+                    .debugRender(enabled: debugSettings.renderDebugEnabled)
+                    .debugCompute(enabled: debugSettings.computeDebugEnabled)
                 
                 Spacer()
                 
@@ -49,8 +49,8 @@ struct ObservableViewA: View {
                 }
                 .buttonStyle(.bordered)
                 .controlSize(.small)
-                .debugRender()
-                // .debugCompute()
+                .debugRender(enabled: debugSettings.renderDebugEnabled)
+                .debugCompute(enabled: debugSettings.computeDebugEnabled)
             }
         }
         .padding()
@@ -66,8 +66,8 @@ struct ObservableViewB: View {
             Text("@Observable View B")
                 .font(.headline)
                 .foregroundColor(.orange)
-                .debugRender()
-                // .debugCompute()
+                .debugRender(enabled: debugSettings.renderDebugEnabled)
+                .debugCompute(enabled: debugSettings.computeDebugEnabled)
             
             let _ = Self._printChanges()
             
@@ -78,8 +78,8 @@ struct ObservableViewB: View {
             HStack {
                 Text("Property B: \(model.propertyB)")
                     .padding(8)
-                    .debugRender()
-                    // .debugCompute()
+                    .debugRender(enabled: debugSettings.renderDebugEnabled)
+                    .debugCompute(enabled: debugSettings.computeDebugEnabled)
                 
                 Spacer()
                 
@@ -88,15 +88,15 @@ struct ObservableViewB: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .controlSize(.small)
-                .debugRender()
-                // .debugCompute()
+                .debugRender(enabled: debugSettings.renderDebugEnabled)
+                .debugCompute(enabled: debugSettings.computeDebugEnabled)
             }
             
             HStack {
                 Text("Counter: \(model.counter)")
                     .padding(8)
-                    .debugRender()
-                    // .debugCompute()
+                    .debugRender(enabled: debugSettings.renderDebugEnabled)
+                    .debugCompute(enabled: debugSettings.computeDebugEnabled)
                 
                 Spacer()
                 
@@ -105,8 +105,8 @@ struct ObservableViewB: View {
                 }
                 .buttonStyle(.bordered)
                 .controlSize(.small)
-                .debugRender()
-                // .debugCompute()
+                .debugRender(enabled: debugSettings.renderDebugEnabled)
+                .debugCompute(enabled: debugSettings.computeDebugEnabled)
             }
         }
         .padding()
