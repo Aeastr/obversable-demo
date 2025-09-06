@@ -367,7 +367,7 @@
 			repositoryURL = "https://github.com/Aeastr/RenderMeThis";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.1;
+				minimumVersion = 2.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

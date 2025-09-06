@@ -9,6 +9,8 @@ import SwiftUI
 import RenderMeThis
 
 struct ContentView: View {
+    @State private var debugSettings = DebugSettings()
+    
     var body: some View {
         TabView {
             ObservableObjectDemoView()
@@ -22,7 +24,14 @@ struct ContentView: View {
                     Image(systemName: "bolt.circle")
                     Text("@Observable")
                 }
+            
+            DebugControlsView()
+                .tabItem {
+                    Image(systemName: "gear")
+                    Text("Debug")
+                }
         }
+        .environment(debugSettings)
     }
 }
 

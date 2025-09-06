@@ -3,6 +3,7 @@ import RenderMeThis
 
 struct ObservableViewA: View {
     @Environment(ObservableModel.self) private var model
+    @Environment(DebugSettings.self) private var debugSettings
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -49,13 +50,14 @@ struct ObservableViewA: View {
             }
         }
         .padding()
-         .debugRender()
-        // .debugCompute()
+        .debugRender(enabled: debugSettings.renderDebugEnabled)
+        .debugCompute(enabled: debugSettings.computeDebugEnabled)
     }
 }
 
 struct ObservableViewB: View {
     @Environment(ObservableModel.self) private var model
+    @Environment(DebugSettings.self) private var debugSettings
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -100,8 +102,8 @@ struct ObservableViewB: View {
             }
         }
         .padding()
-        .debugRender()
-        // .debugCompute()
+        .debugRender(enabled: debugSettings.renderDebugEnabled)
+        .debugCompute(enabled: debugSettings.computeDebugEnabled)
     }
 }
 
