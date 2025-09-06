@@ -3,16 +3,16 @@ import Combine
 import Observation
 
 class ObservableObjectModel: ObservableObject {
-    @Published var propertyA: String = "A Value"
-    @Published var propertyB: String = "B Value" 
+    @Published var propertyA: Int = 10
+    @Published var propertyB: Int = 5
     @Published var counter: Int = 0
     
     func updatePropertyA() {
-        propertyA = "A Updated \(Date().timeIntervalSince1970)"
+        propertyA += 1
     }
     
     func updatePropertyB() {
-        propertyB = "B Updated \(Date().timeIntervalSince1970)"
+        propertyB += 1
     }
     
     func incrementCounter() {
@@ -22,16 +22,16 @@ class ObservableObjectModel: ObservableObject {
 
 @Observable
 class ObservableModel {
-    var propertyA: String = "A Value"
-    var propertyB: String = "B Value"
+    var propertyA: Int = 10
+    var propertyB: Int = 5
     var counter: Int = 0
     
     func updatePropertyA() {
-        propertyA = "A Updated \(Date().timeIntervalSince1970)"
+        propertyA += 1
     }
     
     func updatePropertyB() {
-        propertyB = "B Updated \(Date().timeIntervalSince1970)"
+        propertyB += 1
     }
     
     func incrementCounter() {

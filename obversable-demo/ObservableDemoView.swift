@@ -46,6 +46,7 @@ struct ObservableDemoView: View {
     }
 }
 
+
 #Preview {
-    ObservableDemoView()
+    ContentView()
 }

@@ -7,17 +7,23 @@ struct ObservableObjectViewA: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
+            let _ = Self._printChanges()
+            
             Text("ObservableObject View A")
                 .font(.headline)
                 .foregroundColor(.blue)
-                .debugRender(enabled: debugSettings.renderDebugEnabled)
-                .debugCompute(enabled: debugSettings.computeDebugEnabled)
+                .debugRender()
+                // .debugCompute()
+            
+            Text(UUID().uuidString)
+                .font(.caption)
+                .monospaced()
             
             HStack {
                 Text("Property A: \(model.propertyA)")
                     .padding(8)
-                    .debugRender(enabled: debugSettings.renderDebugEnabled)
-                    .debugCompute(enabled: debugSettings.computeDebugEnabled)
+                    .debugRender()
+                    // .debugCompute()
                 
                 Spacer()
                 
@@ -26,15 +32,15 @@ struct ObservableObjectViewA: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .controlSize(.small)
-                .debugRender(enabled: debugSettings.renderDebugEnabled)
-                .debugCompute(enabled: debugSettings.computeDebugEnabled)
+                .debugRender()
+                // .debugCompute()
             }
             
             HStack {
                 Text("Counter: \(model.counter)")
                     .padding(8)
-                    .debugRender(enabled: debugSettings.renderDebugEnabled)
-                    .debugCompute(enabled: debugSettings.computeDebugEnabled)
+                    .debugRender()
+                    // .debugCompute()
                 
                 Spacer()
                 
@@ -43,13 +49,13 @@ struct ObservableObjectViewA: View {
                 }
                 .buttonStyle(.bordered)
                 .controlSize(.small)
-                .debugRender(enabled: debugSettings.renderDebugEnabled)
-                .debugCompute(enabled: debugSettings.computeDebugEnabled)
+                .debugRender()
+                // .debugCompute()
             }
         }
         .padding()
-        .debugRender(enabled: debugSettings.renderDebugEnabled)
-        .debugCompute(enabled: debugSettings.computeDebugEnabled)
+//        .debugRender()
+        // .debugCompute()
     }
 }
 
@@ -59,17 +65,23 @@ struct ObservableObjectViewB: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
+            let _ = Self._printChanges()
             Text("ObservableObject View B")
                 .font(.headline)
                 .foregroundColor(.green)
-                .debugRender(enabled: debugSettings.renderDebugEnabled)
-                .debugCompute(enabled: debugSettings.computeDebugEnabled)
+                .debugRender()
+                // .debugCompute()
+            
+        
+        Text(UUID().uuidString)
+            .font(.caption)
+            .monospaced()
             
             HStack {
                 Text("Property B: \(model.propertyB)")
                     .padding(8)
-                    .debugRender(enabled: debugSettings.renderDebugEnabled)
-                    .debugCompute(enabled: debugSettings.computeDebugEnabled)
+                    .debugRender()
+                    // .debugCompute()
                 
                 Spacer()
                 
@@ -78,15 +90,15 @@ struct ObservableObjectViewB: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .controlSize(.small)
-                .debugRender(enabled: debugSettings.renderDebugEnabled)
-                .debugCompute(enabled: debugSettings.computeDebugEnabled)
+                .debugRender()
+                // .debugCompute()
             }
             
             HStack {
                 Text("Counter: \(model.counter)")
                     .padding(8)
-                    .debugRender(enabled: debugSettings.renderDebugEnabled)
-                    .debugCompute(enabled: debugSettings.computeDebugEnabled)
+                    .debugRender()
+                    // .debugCompute()
                 
                 Spacer()
                 
@@ -95,21 +107,21 @@ struct ObservableObjectViewB: View {
                 }
                 .buttonStyle(.bordered)
                 .controlSize(.small)
-                .debugRender(enabled: debugSettings.renderDebugEnabled)
-                .debugCompute(enabled: debugSettings.computeDebugEnabled)
+                .debugRender()
+                // .debugCompute()
             }
         }
         .padding()
-        .debugRender(enabled: debugSettings.renderDebugEnabled)
-        .debugCompute(enabled: debugSettings.computeDebugEnabled)
     }
 }
 
 #Preview{
     @Previewable @StateObject var model = ObservableObjectModel()
+    @Previewable @State var settings = DebugSettings()
     VStack{
         ObservableObjectViewA()
         ObservableObjectViewB()
     }
     .environmentObject(model)
+    .environment(settings)
 }
