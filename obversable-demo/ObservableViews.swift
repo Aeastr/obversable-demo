@@ -18,6 +18,8 @@ struct ObservableViewA: View {
         Text(UUID().uuidString)
             .font(.caption)
             .monospaced()
+            .debugRender(enabled: debugSettings.renderDebugEnabled)
+            .debugCompute(enabled: debugSettings.computeDebugEnabled)
             
             HStack {
                 Text("Property A: \(model.propertyA)")
@@ -74,6 +76,8 @@ struct ObservableViewB: View {
         Text(UUID().uuidString)
             .font(.caption)
             .monospaced()
+            .debugRender(enabled: debugSettings.renderDebugEnabled)
+            .debugCompute(enabled: debugSettings.computeDebugEnabled)
             
             HStack {
                 Text("Property B: \(model.propertyB)")
